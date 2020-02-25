@@ -32,5 +32,4 @@ def get_english_meaning(file, eEmotion)
     end
     return key
   end
-  key
 end
