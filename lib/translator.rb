@@ -25,7 +25,7 @@ end
 
 def get_english_meaning(file, eEmotion)
   # code goes here
-  hash = load_library(file)
+  hash = load_library(file)['get_meaning']
   hash.each |key, value| do 
     if value.include?(eEmotion)
       return key
