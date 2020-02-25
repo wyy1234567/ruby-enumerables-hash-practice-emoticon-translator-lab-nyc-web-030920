@@ -28,6 +28,8 @@ def get_english_meaning(file, jEmotion)
   hash = load_library(file)['get_meaning']
   
   if !hash[jEmotion]
-    return ""
+    return "Sorry, that emoticon was not found"
+  end
+  hash[jEmotion]
 
 end
