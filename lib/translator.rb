@@ -27,9 +27,10 @@ def get_english_meaning(file, eEmotion)
   # code goes here
   hash = load_library(file)['get_meaning']
   hash.each do |key, value|  
-    if value.include?(eEmotion)
-      return key
+    if !value.include?(eEmotion)
+      return "Sorry, that emoticon was not found"
     end
+    return key
   end
-  puts "Sorry, that emoticon was not found"
+  key
 end
