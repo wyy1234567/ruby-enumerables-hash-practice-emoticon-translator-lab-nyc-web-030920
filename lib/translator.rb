@@ -26,5 +26,8 @@ end
 def get_english_meaning(file, jEmotion)
   # code goes here
   hash = load_library(file)['get_meaning']
+  
+  if !hash[jEmotion]
+    return ""
 
 end
