@@ -23,13 +23,8 @@ def get_japanese_emoticon(file, jEmotion)
   hash['get_emoticon'][jEmotion]
 end
 
-def get_english_meaning(file, eEmotion)
+def get_english_meaning(file, jEmotion)
   # code goes here
   hash = load_library(file)['get_meaning']
-  hash.each do |key, value|  
-    if !value.include?(eEmotion)
-      return "Sorry, that emoticon was not found"
-    end
-    return key
-  end
+
 end
